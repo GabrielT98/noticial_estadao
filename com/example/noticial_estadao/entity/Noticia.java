@@ -1,4 +1,5 @@
 package com.example.noticial_estadao.entity;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 public class Noticia {
     private int id;
@@ -22,8 +23,10 @@ public class Noticia {
     }
 
 
-    public Date getDataPublicacao() {
-        return dataPublicacao;
+    public String getDataPublicacao() {
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        return dateFormat.format(dataPublicacao);
     }
 
     public String getConteudo() {
